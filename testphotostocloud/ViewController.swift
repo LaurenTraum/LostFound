@@ -8,9 +8,11 @@
 //this is Lauren. Lauren. Lauren
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GIDSignInUIDelegate {
     
     @IBOutlet weak var PhotoLibrary: UIButton!
     
@@ -20,6 +22,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
