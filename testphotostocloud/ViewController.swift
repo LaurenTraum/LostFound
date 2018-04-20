@@ -13,6 +13,7 @@ import GoogleSignIn
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GIDSignInUIDelegate {
+    var foundItems: DatabaseReference!
     
     @IBOutlet weak var PhotoLibrary: UIButton!
     
@@ -24,9 +25,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
+        FirebaseApp.configure()
+        foundItems = Database.database().reference().child("found items")
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    func addFoundItem(){
+        let key = foundItems.childByAutoId().key
+        let foundItem = ["id":key,
+                         "foundItemLocation" : "Bourn Lab",
+                         "foundItemDescription":"blue nalgene waterbottle",
+                         "foundItemDateFound": "4/1/18"]
+        foundItems.child(key).setValue(foundItem)
+        print("item added")
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +49,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func submit(_ sender: UIButton) {
+        addFoundItem()
+    }
     
     
     @IBAction func PhotoLibraryAction(_ sender: UIButton) {

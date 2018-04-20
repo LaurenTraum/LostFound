@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64517FA675E2CE6E5A88BF80 /* Pods_testphotostocloudUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA3F5C862DECE74152E09F1 /* Pods_testphotostocloudUITests.framework */; };
 		6CB9E99E4DF1E8E2ECBDDCCE /* Pods_testphotostocloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2235582755417EB57511F /* Pods_testphotostocloud.framework */; };
+		891A87DB206D433F00EADC89 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A87DA206D433F00EADC89 /* FeedViewController.swift */; };
 		894BB09A2064290D00FBFF06 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BB0992064290D00FBFF06 /* SignInViewController.swift */; };
 		896FDA432069546D00457B3E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 896FDA422069546D00457B3E /* .gitignore */; };
 		89A07355205B0D4400DCACAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A07354205B0D4400DCACAC /* GoogleService-Info.plist */; };
@@ -46,6 +47,7 @@
 		2EA21F38C110603309FB89F2 /* Pods-testphotostocloudUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testphotostocloudUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testphotostocloudUITests/Pods-testphotostocloudUITests.release.xcconfig"; sourceTree = "<group>"; };
 		72116886EE81DEA16112CA59 /* Pods-testphotostocloudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testphotostocloudTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testphotostocloudTests/Pods-testphotostocloudTests.release.xcconfig"; sourceTree = "<group>"; };
 		85F2235582755417EB57511F /* Pods_testphotostocloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testphotostocloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		891A87DA206D433F00EADC89 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		894BB0992064290D00FBFF06 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		896FDA422069546D00457B3E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		89A07354205B0D4400DCACAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				89D00AA82049B2810018EA4A /* ViewController.swift */,
 				89A0735620606A0100DCACAC /* StorageService.swift */,
 				89D00AAA2049B2810018EA4A /* Main.storyboard */,
+				891A87DA206D433F00EADC89 /* FeedViewController.swift */,
 				894BB0992064290D00FBFF06 /* SignInViewController.swift */,
 				89D00AAD2049B2810018EA4A /* Assets.xcassets */,
 				89A073582062CDB000DCACAC /* PhotoUploadDownload.swift */,
@@ -412,6 +415,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -419,6 +423,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +493,7 @@
 				89A0735720606A0100DCACAC /* StorageService.swift in Sources */,
 				89D00AA72049B2810018EA4A /* AppDelegate.swift in Sources */,
 				894BB09A2064290D00FBFF06 /* SignInViewController.swift in Sources */,
+				891A87DB206D433F00EADC89 /* FeedViewController.swift in Sources */,
 				89A073592062CDB000DCACAC /* PhotoUploadDownload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HC8H9475D8;
+				DEVELOPMENT_TEAM = L39URAH23R;
 				INFOPLIST_FILE = testphotostocloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CS.testphotostocloud;
@@ -672,7 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HC8H9475D8;
+				DEVELOPMENT_TEAM = L39URAH23R;
 				INFOPLIST_FILE = testphotostocloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CS.testphotostocloud;

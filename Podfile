@@ -10,6 +10,7 @@ pod 'Firebase/Core'
 pod ‘Firebase/Storage’
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
+pod 'Firebase/Database'
 
   target 'testphotostocloudTests' do
     inherit! :search_paths
