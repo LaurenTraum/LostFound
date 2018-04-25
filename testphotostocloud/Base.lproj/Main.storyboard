@@ -110,8 +110,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="submit"/>
                                 <connections>
-                                    <action selector="addFoundItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPK-2h-d2C"/>
-                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ee2-oW-VSa"/>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nU-jL-YOX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,18 +162,47 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="3eu-Wa-edM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="3eu-Wa-edM" customClass="ViewControllerTableViewCell" customModule="testphotostocloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3eu-Wa-edM" id="YkO-kr-tnb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGN-OA-rLJ" userLabel="Label Found Item Date Found">
+                                                    <rect key="frame" x="28" y="0.0" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIZ-Wk-YZt">
+                                                    <rect key="frame" x="28" y="14" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jj9-JL-qUy">
+                                                    <rect key="frame" x="166" y="14" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelFondItemDateFound" destination="FGN-OA-rLJ" id="1Wg-D8-g9C"/>
+                                            <outlet property="labelFoundItemDateFound" destination="FGN-OA-rLJ" id="ThT-eb-Bqx"/>
+                                            <outlet property="labelFoundItemDescription" destination="uIZ-Wk-YZt" id="lXH-e5-u9g"/>
+                                            <outlet property="labelFoundItemLocation" destination="jj9-JL-qUy" id="cQt-4c-iX2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="EiV-pj-9sR" id="4dT-oQ-tFj"/>
-                                    <outlet property="delegate" destination="EiV-pj-9sR" id="uli-12-pyE"/>
+                                    <outlet property="delegate" destination="EiV-pj-9sR" id="SEl-sz-8kO"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -265,7 +293,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DW2-EW-k2C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4sP-kc-V4u">
-                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
