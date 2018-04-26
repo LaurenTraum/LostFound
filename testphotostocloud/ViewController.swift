@@ -12,33 +12,22 @@ import Firebase
 import GoogleSignIn
 
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // placeholder
-    }
     
+    @IBOutlet weak var pullDownFromFirebase: UITextView!
+    var tableItems = ["dog"]
     var foundItems: DatabaseReference!
-    
-    
-    
-    
-    
     @IBOutlet weak var PhotoLibrary: UIButton!
-    
     @IBOutlet weak var Camera: UIButton!
-    
     @IBOutlet weak var ImageDisplay: UIImageView!
-    
     var foundItemsList = [FoundItemModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        foundItems = Database.database().reference().child("foundItems");
+        foundItems = Database.database().reference().child("found items");
         
         //observing the data changes
         foundItems.observe(DataEventType.value, with: { (snapshot) in
@@ -61,8 +50,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     //creating artist object with model and fetched values  *************************
                     let foundItem = FoundItemModel(id: foundItemId as! String?, dateFound: foundItemDateFound as! String?, description: foundItemDescription as! String?, location: foundItemLocation as! String?)
                     
+                    
                     //appending it to list
                     self.foundItemsList.append(foundItem)
+                    print(foundItem.id!)
                 }
                 
                 //reloading the tableview
@@ -80,6 +71,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
+        
+        cell?.textLabel?.text = self.tableItems[indexPath.row]
+        
+        return cell!
     }
     
     func addFoundItem(){

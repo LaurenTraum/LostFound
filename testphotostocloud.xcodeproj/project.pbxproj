@@ -11,7 +11,7 @@
 		6CB9E99E4DF1E8E2ECBDDCCE /* Pods_testphotostocloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2235582755417EB57511F /* Pods_testphotostocloud.framework */; };
 		891A87DB206D433F00EADC89 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A87DA206D433F00EADC89 /* FeedViewController.swift */; };
 		893DE3BB208A9082003025BE /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DE3BA208A9082003025BE /* ViewControllerTableViewCell.swift */; };
-		893DE3BF208A956F003025BE /* FoundItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DE3BE208A956E003025BE /* FoundItemModel.swift */; };
+		893DE3BF208A956F003025BE /* LostAndFoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DE3BE208A956E003025BE /* LostAndFoundModel.swift */; };
 		894BB09A2064290D00FBFF06 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BB0992064290D00FBFF06 /* SignInViewController.swift */; };
 		896FDA432069546D00457B3E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 896FDA422069546D00457B3E /* .gitignore */; };
 		89A07355205B0D4400DCACAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A07354205B0D4400DCACAC /* GoogleService-Info.plist */; };
@@ -51,7 +51,7 @@
 		85F2235582755417EB57511F /* Pods_testphotostocloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testphotostocloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891A87DA206D433F00EADC89 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		893DE3BA208A9082003025BE /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
-		893DE3BE208A956E003025BE /* FoundItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoundItemModel.swift; path = /Users/lauren/Desktop/boom/testphotostocloud/testphotostocloud/FoundItemModel.swift; sourceTree = "<absolute>"; };
+		893DE3BE208A956E003025BE /* LostAndFoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LostAndFoundModel.swift; path = /Users/lauren/Desktop/boom/testphotostocloud/testphotostocloud/LostAndFoundModel.swift; sourceTree = "<absolute>"; };
 		894BB0992064290D00FBFF06 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		896FDA422069546D00457B3E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		89A07354205B0D4400DCACAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				89D00AAA2049B2810018EA4A /* Main.storyboard */,
 				893DE3BA208A9082003025BE /* ViewControllerTableViewCell.swift */,
 				891A87DA206D433F00EADC89 /* FeedViewController.swift */,
-				893DE3BE208A956E003025BE /* FoundItemModel.swift */,
+				893DE3BE208A956E003025BE /* LostAndFoundModel.swift */,
 				894BB0992064290D00FBFF06 /* SignInViewController.swift */,
 				89D00AAD2049B2810018EA4A /* Assets.xcassets */,
 				89A073582062CDB000DCACAC /* PhotoUploadDownload.swift */,
@@ -498,7 +498,7 @@
 				89D00AA92049B2810018EA4A /* ViewController.swift in Sources */,
 				89A0735720606A0100DCACAC /* StorageService.swift in Sources */,
 				89D00AA72049B2810018EA4A /* AppDelegate.swift in Sources */,
-				893DE3BF208A956F003025BE /* FoundItemModel.swift in Sources */,
+				893DE3BF208A956F003025BE /* LostAndFoundModel.swift in Sources */,
 				894BB09A2064290D00FBFF06 /* SignInViewController.swift in Sources */,
 				891A87DB206D433F00EADC89 /* FeedViewController.swift in Sources */,
 				89A073592062CDB000DCACAC /* PhotoUploadDownload.swift in Sources */,
